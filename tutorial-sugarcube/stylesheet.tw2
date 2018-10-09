@@ -1,0 +1,7 @@
+::BrokenRevolution stylesheet [stylesheet]
+
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+.passage {
+	font-family: Play;
+}

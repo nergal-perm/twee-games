@@ -1,0 +1,35 @@
+::Early Morning 
+
+<h1>Раннее утро</h1>
+
+<span id="countdown">06:59</span>\
+<<silently>>
+	<<set $seconds to 50>>\
+	<<set $odd to false>>\
+	<<repeat 1s>>
+		<<set $seconds to $seconds + 1>>
+		<<if $seconds lt 60 and $odd>>
+			<<replace "#countdown">>06:59<</replace>>
+			<<set $odd to false>>\
+		<<elseif $seconds lt 60 and not $odd>>
+			<<replace "#countdown">>06 59<</replace>>
+			<<set $odd to true>>\
+		<<else>>
+			<<replace "#countdown">>07:00<</replace>>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+
+<<timed 10s>>
+	В серое промозглое утро ворвался резкий зуммер будильника. Звук становился все настойчивее и злее, пока наконец не достиг невыносимой громкости.
+
+	[[Выключить будильник|Awakening]]
+<<endtimed>>
+
+
+::Awakening
+
+<h1>Пробуждение</h1>
+
+Новый день, будь он неладен...

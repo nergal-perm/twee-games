@@ -1,0 +1,12 @@
+::Start
+
+<h1>Twee game tutorial</h1>
+
+by E.Terekhov
+
+[[Play|Early Morning]]
+
+::StoryIncludes
+configuration.tw2
+tutorial.tw2
+stylesheet.tw2
