@@ -8,7 +8,7 @@
 
 .passage p {
 	font-family: 'Caveat', cursive;
-	font-size: 120%;
+	font-size: 150%;
 }
 
 #story-title {
