@@ -1,0 +1,3 @@
+::Configuration [twee2]
+
+Twee2::build_config.story_format = 'SugarCube2'

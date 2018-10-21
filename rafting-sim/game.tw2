@@ -1,0 +1,16 @@
+::StoryTitle
+
+Симулятор сплавщика
+
+::Start [haml]
+
+%h1 
+	Симулятор сплавщика
+
+%p
+	Какая-то странная игра
+
+
+::StoryIncludes
+config.tw2
+styles.tw2

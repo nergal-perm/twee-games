@@ -1,0 +1,20 @@
+::rafting-sim stylesheet [stylesheet]
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Caveat');
+
+.passage h1 {
+	font-family: 'Amatic SC', cursive;
+}
+
+.passage p {
+	font-family: 'Caveat', cursive;
+	font-size: 120%;
+}
+
+#story-title {
+	font-family: 'Amatic SC', cursive;
+}
+
+#menu-core li a {
+	font-family: 'Amatic SC', cursive;	
+}
