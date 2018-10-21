@@ -6,9 +6,10 @@
 	font-family: 'Amatic SC', cursive;
 }
 
-.passage p {
+.passage {
 	font-family: 'Caveat', cursive;
-	font-size: 150%;
+	font-size: 1.6em;
+	line-height: 1.25;
 }
 
 #story-title {
