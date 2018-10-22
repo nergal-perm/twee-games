@@ -7,9 +7,9 @@
 %p
 	Выберите протяжённость маршрута:
 	%ul
-		%li <<click "Короткий">><<set $distance to 10>><<goto "Start-Rafting">><</click>>
-		%li <<click "Средний">><<set $distance to 30>><<goto "Start-Rafting">><</click>>
-		%li <<click "Длинный">><<set $distance to 50>><<goto "Start-Rafting">><</click>>
+		%li [[Короткий|Start-Rafting][$distance to random(8, 15)]]
+		%li [[Средний|Start-Rafting][$distance to random(20,40)]]
+		%li [[Длинный|Start-Rafting][$distance to random(50,100)]]
 
 
 
@@ -48,6 +48,8 @@
 %p
 	Мы периодически бросаем весла, чтобы насладиться окружающей природой. Тем не менее, к вечеру все порядком подустали, проголодались и начали бросать тоскливые взгляды на проплывающие мимо живописные поляны.
 %p
+	<<make-run `$distance/3`>>
+%p#actions(hidden)
 	[[Найти место для стоянки|First-Stop]]
 
 
@@ -69,6 +71,8 @@
 %p
 	Продолжаем грести. Уже порядком надоело
 %p
+	<<make-run `$distance/3`>>
+%p#actions(hidden)
 	[[Найти место для стоянки|Second-Stop]]
 
 
@@ -88,6 +92,8 @@
 %p
 	Ну же, осталось совсем чуть-чуть, давайте ещё немного поднажмём на весла!
 %p
+	<<make-run `$distance/3`>>
+%p#actions(hidden)
 	[[А вот и автобус!!!|Way-Back]]
 
 
@@ -103,3 +109,4 @@
 ::StoryIncludes
 config.tw2
 styles.tw2
+widgets.tw2

@@ -1,0 +1,21 @@
+:: Make-Run [widget]
+<<nobr>>
+<<widget "make-run">>
+Осталось пройти: <span id="distance-countdown"></span> км.
+<<silently>>
+	<<set $distanceLeft to $args[0]>>\
+	<<repeat 400ms>>
+		<<set $distanceLeft to ($distanceLeft - random(1,5)*0.1).toFixed(1)>>
+		<<if $distanceLeft gt 0>>
+			<<replace "#distance-countdown">>$distanceLeft<</replace>>
+		<<else>>
+			<<replace "#distance-countdown">>0<</replace>>
+			<<script>>
+				$('#actions').removeAttr('hidden');
+			<</script>>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+<</widget>>
+<</nobr>>
