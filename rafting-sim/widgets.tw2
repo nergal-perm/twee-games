@@ -1,0 +1,33 @@
+:: Countdown Run Mileage [widget]
+<<nobr>>
+<<widget "make-run">>
+Осталось пройти: <span id="distance-countdown"></span> км.
+<<silently>>
+	<<set $runDistanceLeft to $runDistance>>
+	<<repeat 400ms>>
+		<<set $runDistanceLeft to ($runDistanceLeft - random(1,5)*0.1).toFixed(1)>>
+		<<if $runDistanceLeft gt 0>>
+			<<replace "#distance-countdown">>$runDistanceLeft<</replace>>
+		<<else>>
+			<<replace "#distance-countdown">>0<</replace>>
+			<<script>>
+				$('#actions').removeAttr('hidden');
+			<</script>>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+<</widget>>
+<</nobr>>
+
+:: Choose Run Distance [widget]
+<<nobr>>
+<<widget "choose-run-distance">>
+Сколько километров пройдём?
+<ul>
+	<li> [[Мало (~ 5 км)|Perform-Run][$runDistance to 5]] </li>
+	<li> [[Нормально (~ 10 км)|Perform-Run][$runDistance to 10]] </li>
+	<li> [[Много (~ 20 км)|Perform-Run][$runDistance to 20]] </li>
+</ul>
+<</widget>>
+<</nobr>>
